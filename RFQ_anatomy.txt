@@ -1,0 +1,29 @@
+when RFQ button clicked
+
+
+1. Must add to SESSION
+2. If item(1) is not there yet add it, If another item was clicked add item(n) e.g. item1, item2, item3, etc...
+3. If item is there already update it's qty and price
+
+
+SESSION works with keys
+
+An anatomy of an RFQ entry
+
+        
+        Global RFQ 
+	 Session
+            |     RFQ key   RFQ
+            |       |       properties  (sku, price, partno, qty)
+            |       |       |  
+$_SESSION['rfq']['item1']['sku']
+			 ['partno']
+			 ['price']                         
+                         ['qty']
+
+
+     SESSION       KEY      PRICE
+$_SESSION['rfq']['item1']['price'] = $20
+
+$_SESSION['rfq']['item1']['qty'] = x 50
+
